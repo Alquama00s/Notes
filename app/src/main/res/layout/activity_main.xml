@@ -6,55 +6,70 @@
     android:layout_height="match_parent"
     android:background="@color/teal_700"
     tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lay">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="229dp"
-        android:layout_height="57dp"
-        android:layout_marginBottom="16dp"
-        android:text="Add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="388dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/Text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:id="@+id/scroll"
+        <ScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_above="@+id/Text"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="39dp">
 
-            <TextView
-                android:id="@+id/textView_default"
+            <LinearLayout
+                android:id="@+id/scroll"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:gravity="center"
-                android:text="No items"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-                tools:layout_editor_absoluteX="123dp"
-                tools:layout_editor_absoluteY="644dp" />
-        </LinearLayout>
-    </ScrollView>
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/Text"
-        android:layout_width="281dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Task"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/textView_default"
+                        android:layout_width="300dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:text="No items"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                        android:layout_alignParentLeft="true"
+                        />
+
+                    <Button
+                        android:id="@+id/cross"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="X"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+        <EditText
+            android:id="@+id/Text"
+            android:layout_width="281dp"
+            android:layout_height="49dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Task"
+            android:layout_above="@+id/button"
+            android:layout_centerHorizontal="true"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="229dp"
+            android:layout_height="57dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="31dp"
+            android:layout_centerHorizontal="true"
+            android:text="Add" />
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

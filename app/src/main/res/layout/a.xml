@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="60dp">
+
 <TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/temp"
-    android:layout_width="match_parent"
+    android:id="@+id/textView_default"
+    android:layout_width="300dp"
     android:layout_height="60dp"
     android:gravity="center"
     android:text="No items"
     android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-     />
+    android:layout_alignParentLeft="true"
+    />
+
+<Button
+    android:id="@+id/cross"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:text="X"/>
+</RelativeLayout>

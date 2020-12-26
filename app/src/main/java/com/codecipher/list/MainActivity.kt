@@ -16,11 +16,17 @@ class MainActivity : AppCompatActivity() {
         val def =findViewById<TextView>(R.id.textView_default)
         val scroll=findViewById<LinearLayout>(R.id.scroll)
         val text=findViewById<EditText>(R.id.Text)
+        val inflater = this.layoutInflater
+        val dynamic= inflater.inflate(R.layout.a,null,true)
+        val a=0
         add.setOnClickListener{
-            val inflater = this.layoutInflater
-            val dynamic= inflater.inflate(R.layout.a,null,true)
-            dynamic.findViewById<TextView>(R.id.temp).text = text.text
+            dynamic.findViewById<TextView>(R.id.textView_default).text = text.text
+            
             scroll.addView(dynamic)
+        }
+        val cross=dynamic.findViewById<Button>(R.id.cross)
+        cross.setOnClickListener{
+
         }
     }
 }
